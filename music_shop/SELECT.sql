@@ -9,7 +9,7 @@
 
 SELECT album_name, DATE_PART('year', release_date)
   FROM albums
- WHERE release_date BETWEEN '2018-01-01'
+ WHERE release_date BETWEEN '2018-01-01' 
  						AND '2018-12-31';
  						
 SELECT track_name, duration
@@ -27,8 +27,8 @@ SELECT track_name,
 SELECT mix_name
   FROM mixes
  WHERE DATE_PART('year', release_date) BETWEEN 2018
-  										   AND 2020;
-  										    
+ 										   AND 2020;
+ 
 SELECT artist_name
   FROM artists
  WHERE SPLIT_PART(artist_name, ' ', 2) = '';
