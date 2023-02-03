@@ -27,8 +27,7 @@ CREATE TABLE albums
     album_name    VARCHAR(60)  NOT NULL  UNIQUE,
     release_date  DATE,        
                   CONSTRAINT release_date_range
-                  CHECK (release_date BETWEEN '1900-01-01' 
-                                          AND  current_date)
+                  CHECK (release_date BETWEEN '1900-01-01' AND current_date)
 );
 
 CREATE TABLE albums_artists
@@ -57,8 +56,7 @@ CREATE TABLE mixes
     mix_name     VARCHAR(60)  NOT NULL,
     release_date DATE,        
                  CONSTRAINT release_date_range
-                 CHECK (release_date BETWEEN '1900-01-01' 
-                                         AND  current_date)
+                 CHECK (release_date BETWEEN '1900-01-01' AND current_date)
 );
 
 CREATE TABLE tracks_mixes 
