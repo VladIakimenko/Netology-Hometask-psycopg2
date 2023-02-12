@@ -70,14 +70,13 @@ class Postgres:
 
     def insert_row(self, table, columns, values, returning=''):
         """
-        Method inserts multiple rows to a specific column.
         table - table name
         columns - tuple of columns to be filled
         values - tuple of values, len(tuple) and it's order
                  must coincide with columns!
-        returns: if return_id == 'False':
-                True if no exception raised, False otherwise
-                if return_id == returns the ID auto-incremented ID of the last inserted row
+        returns: if not returning:
+                 True if no exception raised, False otherwise
+                 if returning returns data specified in param
         """
         if len(columns) != len(values):
             print(f'<ERROR> Postgres: Could not insert record!]\n'
@@ -109,7 +108,7 @@ class Postgres:
         Removes a single row from a specific column.
         table - table name
         column - column name
-        target - target str
+        target - target str (what should the value in column equal to)
         returns: True if no exception raised, False otherwise
         """
         query = f"""\
