@@ -166,8 +166,8 @@ def change_phones_or_emails(con, client, func):
         print(f'    {i}. Edit {target[0]}')
         targets_dict[i] = target[0]
     else:
-        print(f'    0. Add a new {("phone", "e-mail")[func == GET_EMAILS]} number')
-        print(f'   -1. Delete {("a phone", "an e-mail")[func == GET_EMAILS]} phone number')
+        print(f'    0. Add a new {("phone", "e-mail")[func == GET_EMAILS]}')
+        print(f'   -1. Delete {("a phone", "an e-mail")[func == GET_EMAILS]}')
 
     action = ''
     while not action \
