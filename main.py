@@ -47,15 +47,6 @@ def enter_data(target):
                 print('Phone can not contain non-digital characters!')
                 continue
 
-            if not len(input_) in range(10, 14):
-                print('None-standard phone length detected.\n'
-                      'Save anyway? ("y" or "n"): ')
-                reply = input().lower().strip()
-                if reply == 'y':
-                    input_ = "0" * (13 - len(input_)) + input_[:13]
-                else:
-                    continue
-
             input_ = format_phone(input_)
         data.append(input_)
     return data
